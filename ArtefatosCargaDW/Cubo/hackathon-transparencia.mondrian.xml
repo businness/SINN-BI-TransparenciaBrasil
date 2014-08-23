@@ -1,0 +1,162 @@
+<Schema name="TransparenciaBrasil">
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Instrucao" caption="Grau de Instru&#231;&#227;o">
+    <Hierarchy visible="true" hasAll="true" allMemberName="Todos" primaryKey="sk_instrucao">
+      <Table name="dim_instrucao">
+      </Table>
+      <Level name="Instrucao" visible="true" column="sk_instrucao" nameColumn="instrucao_nome" ordinalColumn="instrucao_nome" type="Integer" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Grau de Instru&#231;&#227;o">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Ano" caption="Ano">
+    <Hierarchy visible="true" hasAll="true" allMemberName="Todos" primaryKey="ano">
+      <Table name="dim_ano">
+      </Table>
+      <Level name="Ano" visible="true" column="ano" ordinalColumn="ano" type="Integer" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Ano">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Ocupacao" caption="Ocupa&#231;&#227;o">
+    <Hierarchy visible="true" hasAll="true" allMemberName="Todos" primaryKey="sk_ocupacao">
+      <Table name="dim_ocupacao">
+      </Table>
+      <Level name="Ocupacao" visible="true" column="sk_ocupacao" nameColumn="ocupacao_nome" ordinalColumn="ocupacao_nome" type="Integer" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Ocupa&#231;&#227;o">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Cargo" caption="Cargo">
+    <Hierarchy visible="true" hasAll="true" allMemberName="Todos" primaryKey="sk_cargo">
+      <Table name="dim_cargo">
+      </Table>
+      <Level name="Cargo" visible="true" column="sk_cargo" nameColumn="cargo_nome" ordinalColumn="cargo_nome" type="Integer" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Cargo">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Partido" caption="Partido">
+    <Hierarchy visible="true" hasAll="true" allMemberName="Todos" primaryKey="sk_partido">
+      <Table name="dim_partido">
+      </Table>
+      <Level name="Partido" visible="true" column="sk_partido" nameColumn="partido_sigla" ordinalColumn="partido_sigla" type="Integer" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Partido">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="CasaAtual" caption="Casa Atual">
+    <Hierarchy visible="true" hasAll="true" allMemberName="Todos" primaryKey="sk_casa_atual">
+      <Table name="dim_casa_atual">
+      </Table>
+      <Level name="CasaAtual" visible="true" column="sk_casa_atual" nameColumn="casa_atual_nome" ordinalColumn="casa_atual_nome" type="Integer" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Casa Atual">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Estado" caption="Estado">
+    <Hierarchy visible="true" hasAll="true" allMemberName="Todos" primaryKey="sk_estado">
+      <Table name="dim_estado">
+      </Table>
+      <Level name="Estado" visible="true" column="sk_estado" nameColumn="estado_sigla" ordinalColumn="estado_sigla" type="Integer" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Estado">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Doador" caption="Doador">
+    <Hierarchy visible="true" hasAll="true" allMemberName="Todos" primaryKey="sk_doador">
+      <Table name="dim_doador">
+      </Table>
+      <Level name="Doador" visible="true" column="candidato_doador_nome" ordinalColumn="candidato_doador_nome" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Doador">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="FaixaEtaria" caption="Faixa Et&#225;ria">
+    <Hierarchy visible="true" hasAll="true" allMemberName="Todos" primaryKey="sk_faixa_etaria">
+      <Table name="dim_faixa_etaria">
+      </Table>
+      <Level name="FaixaEtaria" visible="true" column="sk_faixa_etaria" nameColumn="faixa_etaria_nome" ordinalColumn="faixa_etaria_nome" type="Integer" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Faixa Et&#225;ria">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Reeleicao" caption="Reelei&#231;&#227;o?">
+    <Hierarchy visible="true" hasAll="true" allMemberName="Todos" primaryKey="sk_reeleicao">
+      <Table name="dim_reeleicao">
+      </Table>
+      <Level name="Reeleicao" visible="true" column="sk_reeleicao" nameColumn="reeleicao_nome" ordinalColumn="reeleicao_nome" type="Integer" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Reelei&#231;&#227;o?">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Candidato" caption="Candidato">
+    <Hierarchy visible="true" hasAll="true" allMemberName="Todos" primaryKey="sk_candidato">
+      <Table name="dim_candidato">
+      </Table>
+      <Level name="Candidato" visible="true" column="sk_candidato" nameColumn="candidato_nome" ordinalColumn="candidato_nome" type="Integer" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Candidato">
+      </Level>
+      <Level name="Apelido" visible="true" column="sk_candidato" nameColumn="candidato_apelido" ordinalColumn="candidato_apelido" type="Integer" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Apelido">
+      </Level>
+      <Level name="Numero" visible="true" column="sk_candidato" nameColumn="candidato_numero" ordinalColumn="candidato_numero" type="Integer" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Numero">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Bancada" caption="Bancada">
+    <Hierarchy visible="true" hasAll="true" allMemberName="Todos" primaryKey="sk_candidato" primaryKeyTable="ponte_candidato_bancada">
+      <Join leftKey="sk_bancada" rightKey="sk_bancada">
+        <Table name="ponte_candidato_bancada">
+        </Table>
+        <Table name="dim_bancada">
+        </Table>
+      </Join>
+      <Level name="Bancada" visible="true" table="dim_bancada" column="sk_bancada" nameColumn="bancada_nome" ordinalColumn="bancada_nome" type="Integer" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Bancada">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Cube name="Candidatos" visible="true" cache="true" enabled="true">
+    <Table name="fato_candidato">
+    </Table>
+    <DimensionUsage source="Instrucao" name="Instrucao" visible="true" foreignKey="sk_instrucao" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Ocupacao" name="Ocupacao" visible="true" foreignKey="sk_ocupacao" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Cargo" name="Cargo" visible="true" foreignKey="sk_cargo" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Partido" name="Partido" visible="true" foreignKey="sk_partido" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="CasaAtual" name="CasaAtual" visible="true" foreignKey="sk_casa_atual" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Estado" name="Estado" visible="true" foreignKey="sk_estado" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="FaixaEtaria" name="FaixaEtaria" visible="true" foreignKey="sk_faixa_etaria" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Reeleicao" name="Reeleicao" visible="true" foreignKey="sk_reeleicao" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Candidato" name="Candidato" visible="true" foreignKey="sk_candidato" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Bancada" name="Bancada" visible="true" foreignKey="sk_candidato" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Ano" name="Ano" visible="true" foreignKey="ano_referencia" highCardinality="false">
+    </DimensionUsage>
+    <Measure name="QtdProcessos" column="processos_qtd" datatype="Integer" aggregator="sum" caption="Qtd. Processos (Total)" visible="true">
+    </Measure>
+    <Measure name="MontanteBens" column="bens_montante" datatype="Numeric" formatString="R$ #,##0.00" aggregator="sum" caption="Bens (Total)" visible="true">
+    </Measure>
+    <Measure name="MontanteDoacoes" column="doacoes_montante" datatype="Numeric" formatString="R$ #,##0.00" aggregator="sum" caption="Doa&#231;&#245;es (Total)" visible="true">
+    </Measure>
+    <Measure name="QtdVotos" column="votos_qtd" datatype="Integer" aggregator="sum" caption="Qtd. Votos (Total)" visible="true">
+    </Measure>
+    <Measure name="GastosEleicoes" column="gastos_eleicoes_montante" datatype="Numeric" formatString="R$ #,##0.00" aggregator="sum" caption="Gastos nas Elei&#231;&#245;es (Total)" visible="true">
+    </Measure>
+    <Measure name="PIB" column="pib" datatype="Numeric" formatString="R$ #,##0.00" aggregator="avg" visible="true">
+    </Measure>
+    <CalculatedMember name="GastosPIB" formatString="0.000%" caption="Gastos / PIB" formula="[Measures].[GastosEleicoes] / [Measures].[PIB]" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="CustoVoto" formatString="R$ #,##0.00" caption="Custo por Voto" formula="[Measures].[GastosEleicoes] / [Measures].[QtdVotos]" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="CustoVotoNacional" formatString="R$ #,##0.00" caption="Custo por Voto (Nacional)" formula="([Candidato].[Todos], [Estado].[Todos], [Measures].[GastosEleicoes]) / ([Candidato].[Todos], [Estado].[Todos], [Measures].[QtdVotos])" dimension="Measures" visible="true">
+    </CalculatedMember>
+  </Cube>
+  <Cube name="DoadorBNDES" caption="Doadores x BNDES" visible="true" cache="true" enabled="true">
+    <Table name="fato_doadores_bndes">
+    </Table>
+    <DimensionUsage source="Ano" name="Ano" visible="true" foreignKey="ano_referencia">
+    </DimensionUsage>
+    <DimensionUsage source="Doador" name="Doador" visible="true" foreignKey="sk_doador">
+    </DimensionUsage>
+    <Measure name="Doacao" column="montante_doado" datatype="Numeric" formatString="R$ #,##0.00" aggregator="sum" caption="Montante Doado" visible="true">
+    </Measure>
+    <Measure name="Emprestimo" column="montante_emprestimo" datatype="Numeric" formatString="R$ #,##0.00" aggregator="sum" caption="Montande Empr&#233;stimo BNDES" visible="true">
+    </Measure>
+  </Cube>
+</Schema>

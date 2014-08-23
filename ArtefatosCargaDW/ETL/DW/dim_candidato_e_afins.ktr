@@ -1,0 +1,994 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>dim_candidato_e_afins</name>
+    <description/>
+    <extended_description/>
+    <trans_version/>
+    <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
+    <directory>&#x2f;</directory>
+    <parameters>
+    </parameters>
+    <log>
+<trans-log-table><connection/>
+<schema/>
+<table/>
+<size_limit_lines/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field><field><id>EXECUTING_SERVER</id><enabled>N</enabled><name>EXECUTING_SERVER</name></field><field><id>EXECUTING_USER</id><enabled>N</enabled><name>EXECUTING_USER</name></field><field><id>CLIENT</id><enabled>N</enabled><name>CLIENT</name></field></trans-log-table>
+<perf-log-table><connection/>
+<schema/>
+<table/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>SEQ_NR</id><enabled>Y</enabled><name>SEQ_NR</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>INPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>INPUT_BUFFER_ROWS</name></field><field><id>OUTPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>OUTPUT_BUFFER_ROWS</name></field></perf-log-table>
+<channel-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>LOGGING_OBJECT_TYPE</id><enabled>Y</enabled><name>LOGGING_OBJECT_TYPE</name></field><field><id>OBJECT_NAME</id><enabled>Y</enabled><name>OBJECT_NAME</name></field><field><id>OBJECT_COPY</id><enabled>Y</enabled><name>OBJECT_COPY</name></field><field><id>REPOSITORY_DIRECTORY</id><enabled>Y</enabled><name>REPOSITORY_DIRECTORY</name></field><field><id>FILENAME</id><enabled>Y</enabled><name>FILENAME</name></field><field><id>OBJECT_ID</id><enabled>Y</enabled><name>OBJECT_ID</name></field><field><id>OBJECT_REVISION</id><enabled>Y</enabled><name>OBJECT_REVISION</name></field><field><id>PARENT_CHANNEL_ID</id><enabled>Y</enabled><name>PARENT_CHANNEL_ID</name></field><field><id>ROOT_CHANNEL_ID</id><enabled>Y</enabled><name>ROOT_CHANNEL_ID</name></field></channel-log-table>
+<step-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field></step-log-table>
+<metrics-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>METRICS_DATE</id><enabled>Y</enabled><name>METRICS_DATE</name></field><field><id>METRICS_CODE</id><enabled>Y</enabled><name>METRICS_CODE</name></field><field><id>METRICS_DESCRIPTION</id><enabled>Y</enabled><name>METRICS_DESCRIPTION</name></field><field><id>METRICS_SUBJECT</id><enabled>Y</enabled><name>METRICS_SUBJECT</name></field><field><id>METRICS_TYPE</id><enabled>Y</enabled><name>METRICS_TYPE</name></field><field><id>METRICS_VALUE</id><enabled>Y</enabled><name>METRICS_VALUE</name></field></metrics-log-table>
+    </log>
+    <maxdate>
+      <connection/>
+      <table/>
+      <field/>
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>10000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file/>
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+  <created_user>-</created_user>
+  <created_date>2014&#x2f;08&#x2f;23 02&#x3a;23&#x3a;51.467</created_date>
+  <modified_user>-</modified_user>
+  <modified_date>2014&#x2f;08&#x2f;23 02&#x3a;23&#x3a;51.467</modified_date>
+  </info>
+  <notepads>
+  </notepads>
+  <connection>
+    <name>TransparenciaDW</name>
+    <server>192.168.110.149</server>
+    <type>MYSQL</type>
+    <access>Native</access>
+    <database>transparencia_dw</database>
+    <port>3306</port>
+    <username>root</username>
+    <password>Encrypted 2be98afc86aa7f2e4cb79ce10cc9da0ce</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>EXTRA_OPTION_MYSQL.defaultFetchSize</code><attribute>500</attribute></attribute>
+      <attribute><code>EXTRA_OPTION_MYSQL.useCursorFetch</code><attribute>true</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>TransparenciaStaging</name>
+    <server>192.168.110.149</server>
+    <type>MYSQL</type>
+    <access>Native</access>
+    <database>transparencia_staging</database>
+    <port>3306</port>
+    <username>root</username>
+    <password>Encrypted 2be98afc86aa7f2e4cb79ce10cc9da0ce</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>EXTRA_OPTION_MYSQL.defaultFetchSize</code><attribute>500</attribute></attribute>
+      <attribute><code>EXTRA_OPTION_MYSQL.useCursorFetch</code><attribute>true</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <order>
+  <hop> <from>Faixas Etarias</from><to>dim_faixa_etaria</to><enabled>Y</enabled> </hop>
+  <hop> <from>dim_faixa_etaria</from><to>dim_instrucao</to><enabled>Y</enabled> </hop>
+  <hop> <from>dim_instrucao</from><to>dim_ocupacao</to><enabled>Y</enabled> </hop>
+  <hop> <from>dim_bancada</from><to>dim_candidato</to><enabled>Y</enabled> </hop>
+  <hop> <from>dim_candidato</from><to>ponte_candidato_bancada</to><enabled>Y</enabled> </hop>
+  <hop> <from>dim_ocupacao</from><to>Mapeia Casa Atual</to><enabled>Y</enabled> </hop>
+  <hop> <from>Mapeia Casa Atual</from><to>dim_casa_atual</to><enabled>Y</enabled> </hop>
+  <hop> <from>Mapeia Reelei&#xe7;&#xe3;o</from><to>dim_reeleicao</to><enabled>Y</enabled> </hop>
+  <hop> <from>dim_casa_atual</from><to>Mapeia Reelei&#xe7;&#xe3;o</to><enabled>Y</enabled> </hop>
+  <hop> <from>dim_reeleicao</from><to>Split bancadas</to><enabled>Y</enabled> </hop>
+  <hop> <from>Candidato</from><to>dim_cargo</to><enabled>Y</enabled> </hop>
+  <hop> <from>dim_cargo</from><to>dim_estado</to><enabled>Y</enabled> </hop>
+  <hop> <from>dim_estado</from><to>dim_partido</to><enabled>Y</enabled> </hop>
+  <hop> <from>dim_partido</from><to>Faixas Etarias</to><enabled>Y</enabled> </hop>
+  <hop> <from>Split bancadas</from><to>Retira bancada vazia</to><enabled>Y</enabled> </hop>
+  <hop> <from>Retira bancada vazia</from><to>dim_bancada</to><enabled>Y</enabled> </hop>
+  </order>
+  <step>
+    <name>Faixas Etarias</name>
+    <type>NumberRange</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <inputField>candidato_idade</inputField>
+    <outputField>faixa_etaria</outputField>
+    <fallBackValue> Desconhecido</fallBackValue>
+    <rules>
+      <rule>
+        <lower_bound>-1.7976931348623157E308</lower_bound>
+        <upper_bound>25.0</upper_bound>
+        <value>18-25</value>
+      </rule>
+      <rule>
+        <lower_bound>25.0</lower_bound>
+        <upper_bound>35.0</upper_bound>
+        <value>25-35</value>
+      </rule>
+      <rule>
+        <lower_bound>35.0</lower_bound>
+        <upper_bound>45.0</upper_bound>
+        <value>35-45</value>
+      </rule>
+      <rule>
+        <lower_bound>45.0</lower_bound>
+        <upper_bound>60.0</upper_bound>
+        <value>45-60</value>
+      </rule>
+      <rule>
+        <lower_bound>60.0</lower_bound>
+        <upper_bound>1.7976931348623157E308</upper_bound>
+        <value>60&#x2b;</value>
+      </rule>
+    </rules>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>128</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Mapeia Casa Atual</name>
+    <type>ValueMapper</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <field_to_use>candidato_casa_atual</field_to_use>
+    <target_field>casa_atual_nome</target_field>
+    <non_match_default> Desconhecido</non_match_default>
+    <fields>
+      <field>
+        <source_value>1</source_value>
+        <target_value>C&#xe2;mara dos Deputados</target_value>
+      </field>
+      <field>
+        <source_value>2</source_value>
+        <target_value>Senado Federal</target_value>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>512</xloc>
+      <yloc>128</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Mapeia Reelei&#xe7;&#xe3;o</name>
+    <type>ValueMapper</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <field_to_use>candidato_reeleicao</field_to_use>
+    <target_field>reeleicao_nome</target_field>
+    <non_match_default> Desconhecido</non_match_default>
+    <fields>
+      <field>
+        <source_value>true</source_value>
+        <target_value>Sim</target_value>
+      </field>
+      <field>
+        <source_value>false</source_value>
+        <target_value>N&#xe3;o</target_value>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>608</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Candidato</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>TransparenciaStaging</connection>
+    <sql>SELECT&#xa;  candidato_id&#xa;, candidato_apelido&#xa;, candidato_nome&#xa;, candidato_numero&#xa;, candidato_titulo&#xa;, candidato_CPF&#xa;, candidato_matricula&#xa;, candidato_cargo&#xa;, candidato_estado&#xa;, candidato_partido&#xa;, candidato_idade&#xa;, candidato_instrucao&#xa;, candidato_ocupacao&#xa;, candidato_mini_bio&#xa;, candidato_cargos&#xa;, candidato_previsao&#xa;, candidato_bancadas&#xa;, candidato_processos&#xa;, candidato_casa_atual&#xa;, candidato_reeleicao&#xa;, candidato_foto&#xa;FROM candidato&#xa;</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>32</xloc>
+      <yloc>64</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Retira bancada vazia</name>
+    <type>IfNull</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <replaceAllByValue/>
+      <replaceAllMask/>
+      <selectFields>Y</selectFields>
+      <selectValuesType>N</selectValuesType>
+      <setEmptyStringAll>N</setEmptyStringAll>
+    <valuetypes>
+      </valuetypes>
+    <fields>
+      <field>
+        <name>bancada_nome</name>
+        <value> Desconhecido</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>896</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Split bancadas</name>
+    <type>SplitFieldToRows3</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+   <splitfield>candidato_bancadas</splitfield>
+   <delimiter>,</delimiter>
+   <newfield>bancada_nome</newfield>
+   <rownum>N</rownum>
+   <rownum_field/>
+   <resetrownumber>Y</resetrownumber>
+   <delimiter_is_regex>N</delimiter_is_regex>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>800</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>dim_bancada</name>
+    <type>DimensionLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <schema/>
+      <table>dim_bancada</table>
+      <connection>TransparenciaDW</connection>
+      <commit>100</commit>
+      <update>Y</update>
+      <fields>
+        <key>
+          <name>bancada_nome</name>
+          <lookup>bancada_nome</lookup>
+        </key>
+        <date>
+          <name/>
+          <from>date_from</from>
+          <to>date_to</to>
+        </date>
+        <return>
+          <name>sk_bancada</name>
+          <rename/>
+          <creation_method>tablemax</creation_method>
+          <use_autoinc>N</use_autoinc>
+          <version>version</version>
+        </return>
+      </fields>
+      <sequence/>
+      <min_year>1900</min_year>
+      <max_year>2199</max_year>
+      <cache_size>5000</cache_size>
+      <preload_cache>N</preload_cache>
+      <use_start_date_alternative>N</use_start_date_alternative>
+      <start_date_alternative>none</start_date_alternative>
+      <start_date_field_name/>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>992</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>dim_candidato</name>
+    <type>DimensionLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <schema/>
+      <table>dim_candidato</table>
+      <connection>TransparenciaDW</connection>
+      <commit>100</commit>
+      <update>Y</update>
+      <fields>
+        <key>
+          <name>candidato_id</name>
+          <lookup>candidato_id</lookup>
+        </key>
+        <date>
+          <name/>
+          <from>date_from</from>
+          <to>date_to</to>
+        </date>
+        <field>
+          <name>candidato_apelido</name>
+          <lookup>candidato_apelido</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>candidato_nome</name>
+          <lookup>candidato_nome</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>candidato_numero</name>
+          <lookup>candidato_numero</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>candidato_titulo</name>
+          <lookup>candidato_titulo</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>candidato_CPF</name>
+          <lookup>candidato_CPF</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>candidato_matricula</name>
+          <lookup>candidato_matricula</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>candidato_mini_bio</name>
+          <lookup>candidato_mini_bio</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>candidato_cargos</name>
+          <lookup>candidato_cargos</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>candidato_previsao</name>
+          <lookup>candidato_previsao</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>candidato_processos</name>
+          <lookup>candidato_processos</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>candidato_foto</name>
+          <lookup>candidato_foto</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>sk_cargo</name>
+          <lookup>sk_cargo</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>sk_estado</name>
+          <lookup>sk_estado</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>sk_partido</name>
+          <lookup>sk_partido</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>sk_faixa_etaria</name>
+          <lookup>sk_faixa_etaria</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>sk_instrucao</name>
+          <lookup>sk_instrucao</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>sk_ocupacao</name>
+          <lookup>sk_ocupacao</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>sk_casa_atual</name>
+          <lookup>sk_casa_atual</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>sk_reeleicao</name>
+          <lookup>sk_reeleicao</lookup>
+          <update>Insert</update>
+        </field>
+        <return>
+          <name>sk_candidato</name>
+          <rename/>
+          <creation_method>tablemax</creation_method>
+          <use_autoinc>N</use_autoinc>
+          <version>version</version>
+        </return>
+      </fields>
+      <sequence/>
+      <min_year>1900</min_year>
+      <max_year>2199</max_year>
+      <cache_size>5000</cache_size>
+      <preload_cache>N</preload_cache>
+      <use_start_date_alternative>N</use_start_date_alternative>
+      <start_date_alternative>none</start_date_alternative>
+      <start_date_field_name/>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1088</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>dim_cargo</name>
+    <type>DimensionLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <schema/>
+      <table>dim_cargo</table>
+      <connection>TransparenciaDW</connection>
+      <commit>100</commit>
+      <update>N</update>
+      <fields>
+        <key>
+          <name>candidato_cargo</name>
+          <lookup>cargo_nome</lookup>
+        </key>
+        <date>
+          <name/>
+          <from>date_from</from>
+          <to>date_to</to>
+        </date>
+        <return>
+          <name>sk_cargo</name>
+          <rename/>
+          <creation_method>tablemax</creation_method>
+          <use_autoinc>N</use_autoinc>
+          <version>version</version>
+        </return>
+      </fields>
+      <sequence/>
+      <min_year>1900</min_year>
+      <max_year>2199</max_year>
+      <cache_size>5000</cache_size>
+      <preload_cache>N</preload_cache>
+      <use_start_date_alternative>N</use_start_date_alternative>
+      <start_date_alternative>none</start_date_alternative>
+      <start_date_field_name/>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>128</xloc>
+      <yloc>64</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>dim_casa_atual</name>
+    <type>DimensionLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <schema/>
+      <table>dim_casa_atual</table>
+      <connection>TransparenciaDW</connection>
+      <commit>100</commit>
+      <update>Y</update>
+      <fields>
+        <key>
+          <name>casa_atual_nome</name>
+          <lookup>casa_atual_nome</lookup>
+        </key>
+        <date>
+          <name/>
+          <from>date_from</from>
+          <to>date_to</to>
+        </date>
+        <return>
+          <name>sk_casa_atual</name>
+          <rename/>
+          <creation_method>tablemax</creation_method>
+          <use_autoinc>N</use_autoinc>
+          <version>version</version>
+        </return>
+      </fields>
+      <sequence/>
+      <min_year>1900</min_year>
+      <max_year>2199</max_year>
+      <cache_size>5000</cache_size>
+      <preload_cache>N</preload_cache>
+      <use_start_date_alternative>N</use_start_date_alternative>
+      <start_date_alternative>none</start_date_alternative>
+      <start_date_field_name/>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>608</xloc>
+      <yloc>128</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>dim_estado</name>
+    <type>DimensionLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <schema/>
+      <table>dim_estado</table>
+      <connection>TransparenciaDW</connection>
+      <commit>100</commit>
+      <update>N</update>
+      <fields>
+        <key>
+          <name>candidato_estado</name>
+          <lookup>estado_sigla</lookup>
+        </key>
+        <date>
+          <name/>
+          <from>date_from</from>
+          <to>date_to</to>
+        </date>
+        <return>
+          <name>sk_estado</name>
+          <rename/>
+          <creation_method>tablemax</creation_method>
+          <use_autoinc>N</use_autoinc>
+          <version>version</version>
+        </return>
+      </fields>
+      <sequence/>
+      <min_year>1900</min_year>
+      <max_year>2199</max_year>
+      <cache_size>5000</cache_size>
+      <preload_cache>N</preload_cache>
+      <use_start_date_alternative>N</use_start_date_alternative>
+      <start_date_alternative>none</start_date_alternative>
+      <start_date_field_name/>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>224</xloc>
+      <yloc>64</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>dim_faixa_etaria</name>
+    <type>DimensionLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <schema/>
+      <table>dim_faixa_etaria</table>
+      <connection>TransparenciaDW</connection>
+      <commit>100</commit>
+      <update>Y</update>
+      <fields>
+        <key>
+          <name>faixa_etaria</name>
+          <lookup>faixa_etaria_nome</lookup>
+        </key>
+        <date>
+          <name/>
+          <from>date_from</from>
+          <to>date_to</to>
+        </date>
+        <return>
+          <name>sk_faixa_etaria</name>
+          <rename/>
+          <creation_method>tablemax</creation_method>
+          <use_autoinc>N</use_autoinc>
+          <version>version</version>
+        </return>
+      </fields>
+      <sequence/>
+      <min_year>1900</min_year>
+      <max_year>2199</max_year>
+      <cache_size>5000</cache_size>
+      <preload_cache>N</preload_cache>
+      <use_start_date_alternative>N</use_start_date_alternative>
+      <start_date_alternative>none</start_date_alternative>
+      <start_date_field_name/>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>256</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>dim_instrucao</name>
+    <type>DimensionLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <schema/>
+      <table>dim_instrucao</table>
+      <connection>TransparenciaDW</connection>
+      <commit>100</commit>
+      <update>Y</update>
+      <fields>
+        <key>
+          <name>candidato_instrucao</name>
+          <lookup>instrucao_nome</lookup>
+        </key>
+        <date>
+          <name/>
+          <from>date_from</from>
+          <to>date_to</to>
+        </date>
+        <return>
+          <name>sk_instrucao</name>
+          <rename/>
+          <creation_method>tablemax</creation_method>
+          <use_autoinc>N</use_autoinc>
+          <version>version</version>
+        </return>
+      </fields>
+      <sequence/>
+      <min_year>1900</min_year>
+      <max_year>2199</max_year>
+      <cache_size>5000</cache_size>
+      <preload_cache>N</preload_cache>
+      <use_start_date_alternative>N</use_start_date_alternative>
+      <start_date_alternative>none</start_date_alternative>
+      <start_date_field_name/>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>384</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>dim_ocupacao</name>
+    <type>DimensionLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <schema/>
+      <table>dim_ocupacao</table>
+      <connection>TransparenciaDW</connection>
+      <commit>100</commit>
+      <update>Y</update>
+      <fields>
+        <key>
+          <name>candidato_ocupacao</name>
+          <lookup>ocupacao_nome</lookup>
+        </key>
+        <date>
+          <name/>
+          <from>date_from</from>
+          <to>date_to</to>
+        </date>
+        <return>
+          <name>sk_ocupacao</name>
+          <rename/>
+          <creation_method>tablemax</creation_method>
+          <use_autoinc>N</use_autoinc>
+          <version>version</version>
+        </return>
+      </fields>
+      <sequence/>
+      <min_year>1900</min_year>
+      <max_year>2199</max_year>
+      <cache_size>5000</cache_size>
+      <preload_cache>N</preload_cache>
+      <use_start_date_alternative>N</use_start_date_alternative>
+      <start_date_alternative>none</start_date_alternative>
+      <start_date_field_name/>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>512</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>dim_partido</name>
+    <type>DimensionLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <schema/>
+      <table>dim_partido</table>
+      <connection>TransparenciaDW</connection>
+      <commit>100</commit>
+      <update>N</update>
+      <fields>
+        <key>
+          <name>candidato_partido</name>
+          <lookup>partido_sigla</lookup>
+        </key>
+        <date>
+          <name/>
+          <from>date_from</from>
+          <to>date_to</to>
+        </date>
+        <return>
+          <name>sk_partido</name>
+          <rename/>
+          <creation_method>tablemax</creation_method>
+          <use_autoinc>N</use_autoinc>
+          <version>version</version>
+        </return>
+      </fields>
+      <sequence/>
+      <min_year>1900</min_year>
+      <max_year>2199</max_year>
+      <cache_size>5000</cache_size>
+      <preload_cache>N</preload_cache>
+      <use_start_date_alternative>N</use_start_date_alternative>
+      <start_date_alternative>none</start_date_alternative>
+      <start_date_field_name/>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>320</xloc>
+      <yloc>64</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>dim_reeleicao</name>
+    <type>DimensionLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <schema/>
+      <table>dim_reeleicao</table>
+      <connection>TransparenciaDW</connection>
+      <commit>100</commit>
+      <update>Y</update>
+      <fields>
+        <key>
+          <name>reeleicao_nome</name>
+          <lookup>reeleicao_nome</lookup>
+        </key>
+        <date>
+          <name/>
+          <from>date_from</from>
+          <to>date_to</to>
+        </date>
+        <return>
+          <name>sk_reeleicao</name>
+          <rename/>
+          <creation_method>tablemax</creation_method>
+          <use_autoinc>N</use_autoinc>
+          <version>version</version>
+        </return>
+      </fields>
+      <sequence/>
+      <min_year>1900</min_year>
+      <max_year>2199</max_year>
+      <cache_size>5000</cache_size>
+      <preload_cache>N</preload_cache>
+      <use_start_date_alternative>N</use_start_date_alternative>
+      <start_date_alternative>none</start_date_alternative>
+      <start_date_field_name/>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>704</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>ponte_candidato_bancada</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>TransparenciaDW</connection>
+    <schema/>
+    <table>ponte_candidato_bancada</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+        <field>
+          <column_name>sk_bancada</column_name>
+          <stream_name>sk_bancada</stream_name>
+        </field>
+        <field>
+          <column_name>sk_candidato</column_name>
+          <stream_name>sk_candidato</stream_name>
+        </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1088</xloc>
+      <yloc>128</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step_error_handling>
+  </step_error_handling>
+   <slave-step-copy-partition-distribution>
+</slave-step-copy-partition-distribution>
+   <slave_transformation>N</slave_transformation>
+
+</transformation>
