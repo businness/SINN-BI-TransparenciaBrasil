@@ -102,7 +102,7 @@
 	                            <h3 class="tile-title"><%=dados[5] %></h3>
 	                          </div>
 	                          <div style="height:50px">
-	                          <a class="btn btn-primary btn-large btn-block" href="<%=dados[2]%>">Estatísticas do Candidato</a>
+	                          <a class="btn btn-primary btn-large btn-block" href="/pentaho/api/repos/:public:DashboardCandidato.wcdf/generatedContent">Estatísticas do Candidato</a>
 	                          </div>
 	                       	</div>  
 	                    <%

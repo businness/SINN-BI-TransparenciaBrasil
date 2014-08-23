@@ -1,0 +1,347 @@
+{
+ "layout": {
+  "title": "Two x One Template",
+  "rows": [
+   {
+    "id": "e1a9ba1c-c923-912f-56c4-cf59dfdef513",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "Panel3",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "200",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "64b28ba7-d64c-f030-8b3e-3b76420d2f85",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "Panel1",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "66327815-9c94-0b2a-ccf2-513764470ebb",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "Panel2",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   }
+  ]
+ },
+ "components": {
+  "rows": [
+   {
+    "id": "Saiku",
+    "name": "Saiku",
+    "type": "Label",
+    "typeDesc": "<i>Group</i>",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "value": "Saiku",
+      "type": "Label"
+     }
+    ]
+   },
+   {
+    "id": "1b8f40f2-d92c-aaf9-ba07-75cb2c5186ce",
+    "type": "ComponentssaikuWidgetComponent",
+    "typeDesc": "Saiku Widget Component",
+    "parent": "Saiku",
+    "properties": [
+     {
+      "name": "name",
+      "value": "Grafico1",
+      "type": "Id"
+     },
+     {
+      "name": "renderMode",
+      "value": "chart",
+      "type": "renderModeCustom"
+     },
+     {
+      "name": "renderType",
+      "value": "line",
+      "type": "renderTypeCustom"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "saikuFilePath",
+      "value": "public/Candidato01.saiku",
+      "type": "SaikuPath"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "width",
+      "value": "950",
+      "type": "Integer"
+     },
+     {
+      "name": "height",
+      "value": "400",
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "Panel1",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     }
+    ]
+   },
+   {
+    "id": "b04a8c31-aefd-0a5f-b46a-e0c50014ff8a",
+    "type": "ComponentssaikuWidgetComponent",
+    "typeDesc": "Saiku Widget Component",
+    "parent": "Saiku",
+    "properties": [
+     {
+      "name": "name",
+      "value": "Grafico2",
+      "type": "Id"
+     },
+     {
+      "name": "renderMode",
+      "value": "chart",
+      "type": "renderModeCustom"
+     },
+     {
+      "name": "renderType",
+      "value": "bar",
+      "type": "renderTypeCustom"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "saikuFilePath",
+      "value": "public/Candidato02.saiku",
+      "type": "SaikuPath"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "width",
+      "value": "950",
+      "type": "Integer"
+     },
+     {
+      "name": "height",
+      "value": "400",
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "${p:Panel2}",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     }
+    ]
+   },
+   {
+    "id": "5b84f3da-db4b-86eb-fd9e-9efa5081f0c6",
+    "type": "ComponentssaikuWidgetComponent",
+    "typeDesc": "Saiku Widget Component",
+    "parent": "Saiku",
+    "properties": [
+     {
+      "name": "name",
+      "value": "Grafico3",
+      "type": "Id"
+     },
+     {
+      "name": "renderMode",
+      "value": "table",
+      "type": "renderModeCustom"
+     },
+     {
+      "name": "renderType",
+      "value": "pie",
+      "type": "renderTypeCustom"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "saikuFilePath",
+      "value": "public/Candidato03.saiku",
+      "type": "SaikuPath"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "width",
+      "value": "950",
+      "type": "Integer"
+     },
+     {
+      "name": "height",
+      "value": "100",
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "${p:Panel3}",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     }
+    ]
+   }
+  ]
+ },
+ "datasources": {
+  "rows": []
+ },
+ "filename": "/public/DashboardCandidato.cdfde"
+}

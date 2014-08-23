@@ -78,10 +78,10 @@
 	              <a href="filtro-candidatos.jsp"><img src="img/btn_candidato.jpg" alt="Painel dos Candidatos" title="Painel dos Candidatos"></a>             
 	            </div>
 	            <div class="col-md-4 features-rightcol wp3">
-	              <a href="dashboard.jsp"><img src="img/btn_consulta.jpg" alt="Painel de Consulta" title="Painel de Consulta"></a>
+	              <a href="/pentaho/content/saiku-ui/index.html?biplugin5=true" target="_new"><img src="img/btn_consulta.jpg" alt="Painel de Consulta" title="Painel de Consulta"></a>
 	            </div>
 	            <div class="col-md-4 features-rightcol wp3">
-	              <a href="estatisticas.jsp"><img src="img/btn_estatisticas.jpg" alt="Estatísticas Gerais" title="Estatísticas Gerais"></a>
+	              <a href="/pentaho/api/repos/:public:DashboardEstatisticas.wcdf/generatedContent" target="_new"><img src="img/btn_estatisticas.jpg" alt="Estatísticas Gerais" title="Estatísticas Gerais"></a>
 	            </div>
           </div>
           
